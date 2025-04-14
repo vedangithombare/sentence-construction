@@ -68,7 +68,7 @@ function SentenceConstruction(props) {
             <div className={"flex flex-col items-center justify-center"}>
                 <span className={"text-xs md:text-md font-medium text-gray-600"}>Select the missing words in correct order</span>
             </div>
-            <div className={"flex flex-col w-full flex-1 px-4 md:px-8 pt-5 md:pt-10 text-sm md:text-xl gap-4 md:gap-8 text-gray-800 leading-relaxed md:leading-13"}>
+            <div className={"flex flex-col w-full flex-1 px-4 md:px-8 pt-5 md:pt-10 text-sm md:text-xl gap-4 md:gap-8 text-gray-800 leading-relaxed  md:leading-13"}>
                 <p className={"text-justify h-min select-none"}>
                     {
                         questions[currentQuestionIndex] &&
@@ -80,10 +80,10 @@ function SentenceConstruction(props) {
                                     <span key={`${questions[currentQuestionIndex]}-blank-${index}`}
                                           onClick={() => selections[index] ? handleRemove(index) : () => {
                                           }}
-                                          className={"inline-flex justify-center items-center relative mx-2 md:mx-4 font-mono " + (selections[index] ? "cursor-pointer" : "")}>
+                                          className={"inline-flex justify-center items-center relative mx-2 md:mx-4  font-mono " + (selections[index] ? "cursor-pointer" : "")}>
                                         {
                                             selections[index] && <span
-                                                className={"block rounded-md border text-xs md:text-sm p-0.5 md:p-1 px-1 md:px-2 bottom-4 md:bottom-5 absolute font-[poppins]"}>{selections[index]}</span>
+                                                className={"text-xs md:text-sm p-0.5 md:p-1 px-1 md:px-2 md:leading-[1.5] absolute font-[poppins]"}>{selections[index]}</span>
                                         }
                                         {
                                             "_".repeat(maxLength + 5)
